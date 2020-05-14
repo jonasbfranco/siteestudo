@@ -1,10 +1,12 @@
 import React from 'react';
 
+import NavBar from './components/NavBar';
 import { GlobalStyle } from './styles/GlobalStyles';
 
 const App: React.FC = () => {
   return (
     <>
+      <NavBar />
       <h1>Bem vindos ao meu site!!!</h1>
       <p>Meu nome é Jonas B. Franco, me siga nas redes sociais!</p>
       <a
