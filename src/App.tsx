@@ -3,7 +3,7 @@ import React from 'react';
 const App: React.FC = () => {
   return (
     <>
-      <h1>Bem vindos ao meu site!</h1>
+      <h1>Bem vindos ao meu site!!!</h1>
       <p>Meu nome é Jonas B. Franco, me siga nas redes sociais!</p>
       <a
         href="https://www.instagram.com/jonasbfranco"

@@ -23,3 +23,9 @@
 ### Generate Site
 
 - yarn build
+
+### Instalar pacotes
+
+- yarn add react-icons
+- yarn add styled-components
+- yarn add -D @types/styled-components
