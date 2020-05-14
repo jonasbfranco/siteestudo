@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <h1>Bem vindos ao meu site!</h1>
+      <p>Meu nome é Jonas B. Franco, me siga nas redes sociais!</p>
+      <a
+        href="https://www.instagram.com/jonasbfranco"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Jonas - Instagram
+      </a>
+      <br />
+      <a
+        href="https://www.facebook.com/jonasbfranco"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Jonas - Facebook
+      </a>
+      <br />
+      <a
+        href="https://www.youtube.com/jonasfranco?sub_confirmation=1"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Tecnoob - Youtube
+      </a>
+    </>
   );
-}
+};
 
 export default App;
