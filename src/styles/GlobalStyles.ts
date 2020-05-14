@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     outline: 0;
     box-sizing: border-box;
-    font-family: 'Ubuntu', 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
   *:focus {
     outline: 0;
@@ -21,7 +21,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   body, input, button {
     font-size: 14px;
-    font-family: 'Ubuntu', 'Roboto', Helvetica, sans-serif;
+    font-family: 'Roboto', Helvetica, sans-serif;
   }
   button {
     cursor: pointer;
@@ -36,7 +36,7 @@ export const GlobalStyle = createGlobalStyle`
   li {
     list-style-type: none;
     text-transform: uppercase;
-    font-family: 'Anton', 'Ubuntu', 'Roboto', Arial, Helvetica, sans-serif;
+    font-family: 'Anton', Arial, Helvetica, sans-serif;
     font-size: 30px;
   }
   a {
