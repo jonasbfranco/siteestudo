@@ -1,37 +1,49 @@
 import React, { useState, useCallback } from 'react';
 import { FiSun, FiMenu, FiX } from 'react-icons/fi';
+import { Link } from 'react-router-dom';
 
 import { Background, Container, MenuDrawer } from './styles';
 
 const NavBar: React.FC = () => {
   const [open, setOpen] = useState<boolean>(false);
 
-  const handleOpen = useCallback((): void => {
-    setOpen(!open);
-  }, [open]);
+  const handleOpen = useCallback(
+    (close = false): void => {
+      if (close) {
+        setOpen(false);
+      } else {
+        setOpen(!open);
+      }
+    },
+    [open],
+  );
 
   return (
-    <>
-      <Background>
-        <Container>
+    <Background>
+      <Container>
+        <Link to="/" onClick={(): void => handleOpen(true)}>
           <p>jbf</p>
-          <FiMenu size={28} color="#fff" onClick={handleOpen} />
-          <ul>
-            <FiSun size={28} color="#D4AE8B" />
-            <li>Projetos</li>
-            <li>Sobre mim</li>
-            <li>Contato</li>
-          </ul>
-        </Container>
-        <MenuDrawer isOpen={open}>
-          <FiX size={28} color="#fff" onClick={handleOpen} />
-          <li>cursos</li>
-          <li>portfolio</li>
-          <li>contato</li>
+        </Link>
+        <FiMenu size={28} color="#fff" onClick={(): void => handleOpen()} />
+        <ul>
           <FiSun size={28} color="#D4AE8B" />
-        </MenuDrawer>
-      </Background>
-    </>
+          <li>Projetos</li>
+          <li>Sobre mim</li>
+          <Link to="contato">
+            <li>Contato</li>
+          </Link>
+        </ul>
+      </Container>
+      <MenuDrawer isOpen={open}>
+        <FiX size={28} color="#fff" onClick={(): void => handleOpen()} />
+        <li>cursos</li>
+        <li>portfolio</li>
+        <Link to="contato" onClick={handleOpen}>
+          <li>contato</li>
+        </Link>
+        <FiSun size={28} color="#D4AE8B" />
+      </MenuDrawer>
+    </Background>
   );
 };
 
